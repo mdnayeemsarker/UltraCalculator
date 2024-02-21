@@ -1,0 +1,66 @@
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+}
+
+android {
+    namespace 'com.github.mdnayeemsarker.ultracalculator'
+    compileSdk 34
+
+    defaultConfig {
+
+        minSdkVersion 24
+        targetSdkVersion 34
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    //noinspection GradleDependency
+    implementation 'com.google.android.material:material:1.8.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId 'com.github.mdnayeemsarker'
+            artifactId 'UltraCalculator'
+            version '1.0.1'
+
+            pom {
+                name = "UltraCalculator"
+                description = "A powerful calculator library"
+                url = "https://github.com/mdnayeemsarker/ultracalculator"
+                licenses {
+                    license {
+                        name = "Apache-2.0"
+                        url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+                    }
+                }
+                developers {
+                    developer {
+                        id = "mdnayeemsarker"
+                        name = "MD NAYEEM SARKER"
+                        email = "nayeemasha703@gmail.com"
+                    }
+                }
+            }
+        }
+    }
+}
