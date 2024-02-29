@@ -9,10 +9,9 @@ android {
 
     defaultConfig {
 
-        minSdkVersion 24
+        minSdkVersion 23
         targetSdkVersion 34
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -41,7 +40,7 @@ publishing {
         release(MavenPublication) {
             groupId 'com.github.mdnayeemsarker'
             artifactId 'UltraCalculator'
-            version '1.0.1'
+            version '1.0.6'
 
             pom {
                 name = "UltraCalculator"

@@ -20,7 +20,7 @@ Add Dependency Just go to your build.gradle Module:
 //Add the dependency
 dependencies {
 ```bash
-	implementation 'com.github.mdnayeemsarker:UltraCalculator:1.0.1''
+	implementation 'com.github.mdnayeemsarker:UltraCalculator:1.0.6''
 ```
 }
 

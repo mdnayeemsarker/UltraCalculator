@@ -31,7 +31,7 @@ android {
 
     // Specify group and version for publishing
     group = 'com.abmn.ultracalculator'
-    version = '1.0.1'
+    version = '1.0.6'
 }
 
 dependencies {
